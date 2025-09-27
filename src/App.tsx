@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, Code, Palette, Zap } from 'lucide-react'
 import ThreeScene from './components/ThreeScene'
+import Image from './assets/image.png'
 import './App.css'
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
   const handleContactClick = (type: string) => {
     switch (type) {
       case 'email':
-        window.location.href = 'mailto:alex.morgan@portfolio.dev'
+        window.location.href = 'tresoryassin221@gmail.com'
         break
       case 'github':
         window.open('https://github.com', '_blank', 'noopener,noreferrer')
@@ -93,7 +94,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            Alex Morgan
+            Gihozo Yassin
           </motion.h1>
           <motion.div
             className="hero-profile"
@@ -103,8 +104,8 @@ function App() {
           >
             <div className="profile-image">
               <img 
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                alt="Alex Morgan - Creative Developer"
+                src={Image} 
+                alt="Gihozo Yassin - Creative Developer"
               />
             </div>
           </motion.div>
@@ -166,7 +167,7 @@ function App() {
           >
             <h2 className="section-title">About Me</h2>
             <p className="about-text">
-              I'm Alex Morgan, a passionate developer who bridges the gap between design and technology. 
+              I'm Gihozo Yassin, a passionate developer who bridges the gap between design and technology. 
               With expertise in modern web technologies and 3D graphics, I create experiences 
               that push the boundaries of what's possible on the web.
             </p>
@@ -262,12 +263,12 @@ function App() {
             <div className="contact-profile">
               <div className="contact-avatar">
                 <img 
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200" 
-                  alt="Alex Morgan"
+                  src={Image} 
+                  alt="Gihozo Yassin - Creative Developer"
                 />
               </div>
               <div className="contact-info">
-                <h3>Alex Morgan</h3>
+                <h3>Gihozo Yassin</h3>
                 <p>Creative Developer & 3D Artist</p>
               </div>
             </div>
@@ -279,7 +280,7 @@ function App() {
                 onClick={() => handleContactClick('email')}
               >
                 <Mail className="contact-icon" />
-                <span>alex.morgan@portfolio.dev</span>
+                <span>tresoryassin221@gmail.com</span>
               </motion.a>
               <motion.a 
                 className="contact-link"
