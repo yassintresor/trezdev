@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, Code, Palette, Zap } from 'lucide-react'
 import BackgroundCanvas from './components/BackgroundCanvas'
-import CanvasCursor from './components/CanvasCursor'
 import Image from './assets/image.png'
 import './App.css'
 
@@ -80,9 +79,6 @@ function App() {
     <div ref={containerRef} className="portfolio-container">
       {/* Canvas Background Animation */}
       <BackgroundCanvas />
-      
-      {/* Canvas Cursor Animation */}
-      <CanvasCursor />
 
       {/* Hero Section */}
       <motion.section className="hero-section">
