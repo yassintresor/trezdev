@@ -19,22 +19,6 @@ body {
   min-height: 100vh;
 }
 
-/* 3D Scene Background */
-.three-scene-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.three-scene {
-  width: 100%;
-  height: 100%;
-}
-
 /* Hero Section */
 .hero-section {
   position: relative;

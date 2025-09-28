@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, Code, Palette, Zap } from 'lucide-react'
-import ThreeScene from './components/ThreeScene'
+import BackgroundCanvas from './components/BackgroundCanvas'
 import CanvasCursor from './components/CanvasCursor'
 import Image from './assets/image.png'
 import './App.css'
@@ -78,10 +78,8 @@ function App() {
 
   return (
     <div ref={containerRef} className="portfolio-container">
-      {/* 3D Background Scene */}
-      <div className="three-scene-container">
-        <ThreeScene />
-      </div>
+      {/* Canvas Background Animation */}
+      <BackgroundCanvas />
       
       {/* Canvas Cursor Animation */}
       <CanvasCursor />
