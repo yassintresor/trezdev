@@ -47,25 +47,11 @@ function App() {
 
   const projects = [
     {
-      title: "Neural Network Visualizer",
-      description: "Interactive 3D visualization of neural networks with real-time training data",
-      tech: ["React", "Three.js", "WebGL", "TensorFlow.js"],
-      image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "https://github.com/example/neural-viz"
-    },
-    {
-      title: "Quantum Computing Simulator",
-      description: "Web-based quantum circuit simulator with interactive qubit manipulation",
-      tech: ["TypeScript", "WebAssembly", "Canvas API", "Node.js"],
-      image: "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "https://github.com/example/quantum-sim"
-    },
-    {
-      title: "AR Portfolio Experience",
-      description: "Augmented reality portfolio viewer using WebXR and spatial computing",
-      tech: ["WebXR", "A-Frame", "JavaScript", "GLSL"],
-      image: "https://images.pexels.com/photos/8386422/pexels-photo-8386422.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "https://github.com/example/ar-portfolio"
+      title: "Oil Tracking Application",
+      description: "A comprehensive platform for tracking and managing oil inventory with real-time analytics and reporting capabilities",
+      tech: ["React", "TypeScript", "Vercel", "Next.js"],
+      image: "https://images.pexels.com/photos/3962643/pexels-photo-3962643.jpeg?auto=compress&cs=tinysrgb&w=800",
+      link: "https://the-oil-tracking.vercel.app/"
     }
   ]
 
