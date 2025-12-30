@@ -46,7 +46,7 @@ const BackgroundCanvas = () => {
           vy: (Math.random() - 0.5) * 0.5,
           size: Math.random() * 3 + 1,
           opacity: Math.random() * 0.5 + 0.2,
-          hue: Math.random() * 60 + 220, // Blue to purple range
+          hue: Math.random() * 30 + 180, // Cyan to blue range
           targetX: Math.random() * canvas.width,
           targetY: Math.random() * canvas.height
         })
@@ -76,7 +76,7 @@ const BackgroundCanvas = () => {
 
           if (distance < maxDistance) {
             const opacity = (1 - distance / maxDistance) * 0.2
-            ctx.strokeStyle = `hsla(240, 50%, 70%, ${opacity})`
+            ctx.strokeStyle = `hsla(190, 70%, 60%, ${opacity})`
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)
@@ -97,9 +97,9 @@ const BackgroundCanvas = () => {
         mouse.x, mouse.y, 0,
         mouse.x, mouse.y, 150
       )
-      gradient.addColorStop(0, 'rgba(102, 126, 234, 0.1)')
-      gradient.addColorStop(0.5, 'rgba(102, 126, 234, 0.05)')
-      gradient.addColorStop(1, 'rgba(102, 126, 234, 0)')
+      gradient.addColorStop(0, 'rgba(0, 212, 255, 0.15)')
+      gradient.addColorStop(0.5, 'rgba(0, 212, 255, 0.08)')
+      gradient.addColorStop(1, 'rgba(0, 212, 255, 0)')
 
       ctx.fillStyle = gradient
       ctx.beginPath()
@@ -114,8 +114,8 @@ const BackgroundCanvas = () => {
         const distance = Math.sqrt(dx * dx + dy * dy)
 
         if (distance < maxDistance) {
-          const opacity = (1 - distance / maxDistance) * 0.3
-          ctx.strokeStyle = `hsla(250, 60%, 80%, ${opacity})`
+          const opacity = (1 - distance / maxDistance) * 0.4
+          ctx.strokeStyle = `hsla(190, 80%, 70%, ${opacity})`
           ctx.lineWidth = 2
           ctx.beginPath()
           ctx.moveTo(particle.x, particle.y)
@@ -135,7 +135,7 @@ const BackgroundCanvas = () => {
       timeRef.current += 0.01
 
       // Clear canvas with fade effect
-      ctx.fillStyle = 'rgba(10, 10, 10, 0.05)'
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       // Update particles
@@ -160,10 +160,10 @@ const BackgroundCanvas = () => {
         // Draw particle
         ctx.save()
         ctx.globalAlpha = Math.max(0.1, pulseOpacity)
-        ctx.fillStyle = `hsl(${particle.hue + Math.sin(timeRef.current) * 10}, 60%, 60%)`
-        ctx.shadowBlur = 15
-        ctx.shadowColor = `hsl(${particle.hue}, 60%, 60%)`
-        
+        ctx.fillStyle = `hsl(${particle.hue + Math.sin(timeRef.current) * 15}, 80%, 65%)`
+        ctx.shadowBlur = 20
+        ctx.shadowColor = `hsl(${particle.hue}, 80%, 65%)`
+
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
         ctx.fill()
@@ -178,14 +178,14 @@ const BackgroundCanvas = () => {
 
       // Add ambient waves
       ctx.save()
-      ctx.globalAlpha = 0.1
-      ctx.strokeStyle = `hsl(${240 + Math.sin(timeRef.current) * 20}, 50%, 70%)`
+      ctx.globalAlpha = 0.08
+      ctx.strokeStyle = `hsl(${190 + Math.sin(timeRef.current) * 20}, 70%, 60%)`
       ctx.lineWidth = 2
-      
+
       for (let i = 0; i < 3; i++) {
         ctx.beginPath()
         for (let x = 0; x <= canvas.width; x += 10) {
-          const y = canvas.height / 2 + 
+          const y = canvas.height / 2 +
                    Math.sin((x + timeRef.current * 100) * 0.01 + i * 2) * 50 +
                    Math.sin((x + timeRef.current * 50) * 0.005 + i) * 30
           if (x === 0) {
