@@ -27,6 +27,7 @@ body {
   justify-content: center;
   text-align: center;
   background: radial-gradient(ellipse at top, rgba(0, 153, 255, 0.15) 0%, rgba(0, 0, 0, 0.95) 50%);
+  z-index: 10;
 }
 
 .hero-content {
@@ -356,6 +357,7 @@ body {
     rgba(0, 0, 0, 0.95) 100%);
   backdrop-filter: blur(10px);
   position: relative;
+  z-index: 11;
 }
 
 .about-section::before {
@@ -511,6 +513,7 @@ body {
     rgba(0, 30, 50, 0.4) 50%,
     rgba(0, 0, 0, 0.95) 100%);
   position: relative;
+  z-index: 12;
 }
 
 .projects-section::before {
@@ -669,6 +672,7 @@ body {
     rgba(0, 0, 0, 0.95) 100%);
   backdrop-filter: blur(10px);
   position: relative;
+  z-index: 13;
 }
 
 .contact-section::before {
