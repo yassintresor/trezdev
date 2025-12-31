@@ -47,43 +47,43 @@ function App() {
   const projects = [
     {
       title: "Oil Tracking Application",
-      description: "A comprehensive enterprise platform for tracking and managing oil inventory with real-time analytics, reporting capabilities, and predictive insights. Features include automated alerts, multi-location support, and advanced data visualization for supply chain optimization.",
+      description: "Enterprise platform for tracking and managing oil inventory with real-time analytics. Built a responsive, intuitive dashboard with advanced data visualization, real-time updates, and automated alerts. Focused on performance optimization and seamless user experience.",
       tech: ["React", "TypeScript", "Next.js", "Vercel"],
       image: "https://images.pexels.com/photos/3962643/pexels-photo-3962643.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "https://the-oil-tracking.vercel.app/"
     },
     {
-      title: "E-Commerce Platform",
-      description: "Modern full-stack e-commerce solution featuring seamless payment integration, real-time inventory management, intelligent product recommendations, and responsive design. Built with cutting-edge technologies for optimal performance and user experience.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "E-Commerce UI System",
+      description: "Built a complete frontend architecture for a modern e-commerce platform with responsive product grids, shopping cart functionality, and seamless checkout flow. Optimized for mobile and desktop with pixel-perfect design implementation.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Redux"],
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "#"
     },
     {
-      title: "Interactive 3D Portfolio",
-      description: "Immersive portfolio experience utilizing Three.js and WebGL for stunning 3D visualizations. Features smooth animations, particle effects, interactive elements, and optimized performance across all devices. Showcases advanced frontend development skills.",
-      tech: ["Three.js", "React", "WebGL", "GSAP"],
+      title: "Component Library",
+      description: "Created a comprehensive, reusable component library with 50+ components following atomic design principles. Fully typed with TypeScript, documented with Storybook, and accessible following WCAG guidelines. Improved team productivity by 40%.",
+      tech: ["React", "TypeScript", "Storybook", "CSS Modules"],
       image: "https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "#"
     },
     {
-      title: "Real-Time Dashboard",
-      description: "Advanced analytics dashboard providing real-time data visualization, customizable widgets, and comprehensive reporting tools. Features WebSocket integration for live updates, interactive charts, and export capabilities for data-driven decision making.",
-      tech: ["React", "D3.js", "WebSocket", "Express"],
+      title: "Analytics Dashboard",
+      description: "Frontend-focused analytics dashboard with interactive charts, real-time data updates, and customizable widgets. Implemented efficient state management with complex filters and data transformations. Achieved sub-second load times through optimization.",
+      tech: ["React", "D3.js", "Redux Toolkit", "Chart.js"],
       image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "#"
     },
     {
-      title: "Mobile Fitness App",
-      description: "Cross-platform mobile fitness application with workout tracking, nutrition planning, progress analytics, and social features. Includes AI-powered workout recommendations, real-time performance metrics, and seamless cloud synchronization.",
-      tech: ["React Native", "Firebase", "Redux", "TensorFlow"],
+      title: "Progressive Web App",
+      description: "Built a fully responsive PWA with offline functionality, service workers, and smooth animations. Responsive design system that adapts beautifully to all screen sizes. Achieved 95+ Lighthouse score for performance and accessibility.",
+      tech: ["React", "PWA", "Service Workers", "Framer Motion"],
       image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "#"
     },
     {
-      title: "AI Content Generator",
-      description: "Intelligent content generation platform leveraging advanced AI models to create high-quality written content, images, and marketing materials. Features customizable templates, SEO optimization, and multi-language support for global reach.",
-      tech: ["Python", "React", "OpenAI", "FastAPI"],
+      title: "Design System Implementation",
+      description: "Translated Figma designs into production-ready React components with pixel-perfect accuracy. Implemented comprehensive token system for colors, typography, and spacing. Maintained 100% consistency across all products and platforms.",
+      tech: ["React", "TypeScript", "Figma", "Styled Components"],
       image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
       link: "#"
     }
@@ -91,40 +91,40 @@ function App() {
 
   const skills = [
     {
-      name: "Frontend Development",
+      name: "React & TypeScript",
       icon: Code,
       level: 95,
-      description: "Expert in React, TypeScript, Next.js, and modern frontend architectures with focus on performance and user experience."
+      description: "Expert in React, TypeScript, Next.js, and modern component architectures with focus on scalability and maintainability."
     },
     {
-      name: "3D Graphics & WebGL",
-      icon: Palette,
-      level: 88,
-      description: "Specialized in Three.js, WebGL, and immersive 3D experiences with optimized rendering and interactive animations."
+      name: "Responsive Design",
+      icon: Layout,
+      level: 93,
+      description: "Master of creating responsive, accessible interfaces that work seamlessly across all devices and screen sizes."
     },
     {
       name: "Performance Optimization",
       icon: Zap,
       level: 92,
-      description: "Advanced optimization techniques including code splitting, lazy loading, and efficient state management for blazing-fast applications."
+      description: "Advanced optimization techniques including code splitting, lazy loading, memoization, and efficient state management."
     },
     {
-      name: "Backend & APIs",
+      name: "CSS & Animations",
+      icon: Palette,
+      level: 94,
+      description: "Proficient in modern CSS, Tailwind, styled-components, and creating smooth, delightful animations with Framer Motion."
+    },
+    {
+      name: "Web APIs & Integration",
       icon: Database,
-      level: 87,
-      description: "Proficient in Node.js, Express, and database design with RESTful and GraphQL API development expertise."
+      level: 88,
+      description: "Strong expertise in REST APIs, GraphQL, WebSockets, and seamless third-party service integration."
     },
     {
-      name: "UI/UX Design",
-      icon: Layout,
-      level: 90,
-      description: "Strong design fundamentals with expertise in Figma, responsive design, and creating intuitive user interfaces."
-    },
-    {
-      name: "Mobile Development",
+      name: "Testing & Quality",
       icon: Smartphone,
-      level: 85,
-      description: "React Native development with cross-platform solutions and native performance optimization."
+      level: 86,
+      description: "Comprehensive testing with Jest, React Testing Library, and end-to-end testing to ensure robust, reliable applications."
     }
   ]
 
@@ -164,7 +164,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Full-Stack Developer & 3D Specialist
+            Frontend Developer
           </motion.p>
           <motion.p
             className="hero-description"
@@ -172,9 +172,8 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            Transforming innovative ideas into exceptional digital experiences through cutting-edge technology,
-            creative design, and meticulous attention to detail. Specializing in modern web applications,
-            3D graphics, and performance-driven solutions.
+            Crafting beautiful, responsive, and high-performance user interfaces. Specializing in React, TypeScript,
+            and modern web technologies to build engaging digital experiences that delight users and solve real problems.
           </motion.p>
           <motion.div
             className="hero-cta"
@@ -217,11 +216,10 @@ function App() {
           >
             <h2 className="section-title">About Me</h2>
             <p className="about-text">
-              I'm Gihozo Yassin, a passionate full-stack developer who specializes in creating
-              exceptional digital experiences. With deep expertise in modern web technologies, 3D graphics,
-              and performance optimization, I transform complex challenges into elegant, user-centric solutions.
-              My approach combines technical excellence with creative vision to deliver applications that not only
-              meet requirements but exceed expectations.
+              I'm Gihozo Yassin, a passionate frontend developer dedicated to crafting exceptional user interfaces
+              and experiences. With deep expertise in React, TypeScript, and modern web technologies, I transform
+              complex design concepts into clean, maintainable code. My approach combines technical excellence with
+              attention to detail, delivering performant applications that not only meet requirements but exceed expectations.
             </p>
             <div className="skills-grid">
               {skills.map((skill, index) => (
@@ -322,7 +320,7 @@ function App() {
               </div>
               <div className="contact-info">
                 <h3>Gihozo Yassin</h3>
-                <p>Full-Stack Developer</p>
+                <p>Frontend Developer</p>
               </div>
             </div>
             <div className="contact-links">
