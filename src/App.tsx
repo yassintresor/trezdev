@@ -57,7 +57,7 @@ function App() {
       description: "Built a complete frontend architecture for a modern e-commerce platform with responsive product grids, shopping cart functionality, and seamless checkout flow. Optimized for mobile and desktop with pixel-perfect design implementation.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Redux"],
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      link: "#"
+      link: "https://commerce-canvas-bice.vercel.app"
     },
     {
       title: "Component Library",
