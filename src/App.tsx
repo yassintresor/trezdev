@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Github, Linkedin, Mail, ExternalLink, Code, Palette, Zap, Database, Layout, Smartphone } from 'lucide-react'
 import BackgroundCanvas from './components/BackgroundCanvas'
+import SplineViewer from './components/SplineViewer'
 import Image from './assets/image.png'
 import './App.css'
 
@@ -146,7 +147,7 @@ function App() {
             Gihozo Yassin
           </motion.h1>
           <motion.div
-            className="hero-profile"
+            className="hero-profile-section"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -156,6 +157,9 @@ function App() {
                 src={Image}
                 alt="Gihozo Yassin - Creative Developer"
               />
+            </div>
+            <div className="spline-viewer-wrapper">
+              <SplineViewer url="https://my.spline.design/robotfollowcursorforlandingpagemc-q1eBX3LZCC0YE6jLwSlQrnkM/" />
             </div>
           </motion.div>
           <motion.p
