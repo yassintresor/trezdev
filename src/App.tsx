@@ -207,71 +207,46 @@ function App() {
 
       <motion.section className="about-section">
         <div className="section-container">
-          <div className="about-wrapper">
-            <motion.div
-              className="about-image"
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="profile-image-about">
-                <img
-                  src={Image}
-                  alt="Gihozo Yassin - Creative Developer"
-                />
-              </div>
-              <motion.div
-                className="spline-animation"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <spline-viewer url="https://my.spline.design/robotfollowcursorforlandingpagemc-q1eBX3LZCC0YE6jLwSlQrnkM/"></spline-viewer>
-              </motion.div>
-            </motion.div>
-            <motion.div
-              className="about-content"
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="section-title">About Me</h2>
-              <p className="about-text">
-                I'm Gihozo Yassin, a passionate frontend developer dedicated to crafting exceptional user interfaces
-                and experiences. With deep expertise in React, TypeScript, and modern web technologies, I transform
-                complex design concepts into clean, maintainable code. My approach combines technical excellence with
-                attention to detail, delivering performant applications that not only meet requirements but exceed expectations.
-              </p>
-              <div className="skills-grid">
-                {skills.map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    className="skill-card"
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <skill.icon className="skill-icon" />
-                    <h3 className="skill-name">{skill.name}</h3>
-                    <p className="skill-description">{skill.description}</p>
-                    <div className="skill-bar">
-                      <motion.div
-                        className="skill-progress"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1.5, delay: 0.5 }}
-                        viewport={{ once: true }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            className="about-content"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="section-title">About Me</h2>
+            <p className="about-text">
+              I'm Gihozo Yassin, a passionate frontend developer dedicated to crafting exceptional user interfaces
+              and experiences. With deep expertise in React, TypeScript, and modern web technologies, I transform
+              complex design concepts into clean, maintainable code. My approach combines technical excellence with
+              attention to detail, delivering performant applications that not only meet requirements but exceed expectations.
+            </p>
+            <div className="skills-grid">
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  className="skill-card"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <skill.icon className="skill-icon" />
+                  <h3 className="skill-name">{skill.name}</h3>
+                  <p className="skill-description">{skill.description}</p>
+                  <div className="skill-bar">
+                    <motion.div
+                      className="skill-progress"
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${skill.level}%` }}
+                      transition={{ duration: 1.5, delay: 0.5 }}
+                      viewport={{ once: true }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </motion.section>
 

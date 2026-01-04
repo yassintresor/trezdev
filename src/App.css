@@ -371,75 +371,8 @@ body {
   box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
 }
 
-.about-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-
-.about-image {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  align-items: center;
-}
-
-.profile-image-about {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 6px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.4),
-              0 0 100px rgba(0, 153, 255, 0.2),
-              inset 0 0 30px rgba(0, 212, 255, 0.1);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  background: rgba(0, 212, 255, 0.05);
-}
-
-.profile-image-about img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.profile-image-about:hover {
-  transform: scale(1.1) translateY(-5px);
-  border-color: rgba(0, 242, 255, 0.6);
-  box-shadow: 0 30px 80px rgba(0, 212, 255, 0.6);
-}
-
-.spline-animation {
-  width: 300px;
-  height: 300px;
-  border-radius: 30px;
-  overflow: hidden;
-  border: 2px solid rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3),
-              0 0 100px rgba(0, 153, 255, 0.2);
-  background: rgba(0, 0, 0, 0.5);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.spline-animation:hover {
-  border-color: rgba(0, 242, 255, 0.6);
-  box-shadow: 0 30px 80px rgba(0, 212, 255, 0.4),
-              0 0 150px rgba(0, 153, 255, 0.3);
-  transform: scale(1.05) translateY(-5px);
-}
-
-spline-viewer {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-}
-
 .about-content {
-  text-align: left;
+  text-align: center;
 }
 
 .about-text {
@@ -927,29 +860,6 @@ spline-viewer {
   .cta-button {
     width: 100%;
     max-width: 350px;
-  }
-
-  .about-wrapper {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .about-image {
-    order: -1;
-  }
-
-  .about-content {
-    text-align: center;
-  }
-
-  .profile-image-about {
-    width: 200px;
-    height: 200px;
-  }
-
-  .spline-animation {
-    width: 250px;
-    height: 250px;
   }
 
   .skills-grid {
