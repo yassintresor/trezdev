@@ -9,6 +9,7 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null)
   const projectsRef = useRef<HTMLElement>(null)
   const contactRef = useRef<HTMLElement>(null)
+  const aboutRef = useRef<HTMLElement>(null)
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -16,6 +17,16 @@ function App() {
   })
 
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"])
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.8])
+
+  const { scrollYProgress: aboutProgress } = useScroll({
+    target: aboutRef,
+    offset: ["start end", "end start"]
+  })
+
+  const aboutY = useTransform(aboutProgress, [0, 1], [100, -100])
+  const aboutRotate = useTransform(aboutProgress, [0, 1], [-5, 5])
 
   const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({
@@ -135,7 +146,7 @@ function App() {
       <motion.section className="hero-section">
         <motion.div
           className="hero-content"
-          style={{ y: textY }}
+          style={{ y: textY, opacity, scale }}
         >
           <motion.h1
             className="hero-title"
@@ -205,7 +216,7 @@ function App() {
         </motion.div>
       </motion.section>
 
-      <motion.section className="about-section">
+      <motion.section ref={aboutRef} className="about-section">
         <div className="section-container">
           <motion.div
             className="about-content"
@@ -213,6 +224,7 @@ function App() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            style={{ y: aboutY }}
           >
             <h2 className="section-title">About Me</h2>
             <p className="about-text">
@@ -226,10 +238,17 @@ function App() {
                 <motion.div
                   key={skill.name}
                   className="skill-card"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 50, rotateX: -15 }}
+                  whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  whileHover={{
+                    rotateY: 5,
+                    rotateX: 5,
+                    scale: 1.05,
+                    transition: { duration: 0.3 }
+                  }}
+                  style={{ transformStyle: 'preserve-3d', perspective: 1000 }}
                 >
                   <skill.icon className="skill-icon" />
                   <h3 className="skill-name">{skill.name}</h3>
@@ -266,11 +285,18 @@ function App() {
               <motion.div
                 key={project.title}
                 className="project-card"
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
+                initial={{ opacity: 0, y: 100, rotateX: -20, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1, type: "spring" }}
+                viewport={{ once: true, margin: "-100px" }}
+                whileHover={{
+                  y: -15,
+                  scale: 1.03,
+                  rotateY: 3,
+                  rotateX: 3,
+                  transition: { duration: 0.3 }
+                }}
+                style={{ transformStyle: 'preserve-3d', perspective: 1200 }}
               >
                 <div
                   className="project-image"
@@ -326,7 +352,11 @@ function App() {
             <div className="contact-links">
               <motion.a
                 className="contact-link"
-                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0, x: -50, rotateY: -20 }}
+                whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.08, rotateZ: 2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleContactClick('email')}
               >
@@ -335,7 +365,11 @@ function App() {
               </motion.a>
               <motion.a
                 className="contact-link"
-                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0, y: 50, rotateX: -20 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.08, rotateZ: -2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleContactClick('github')}
               >
@@ -344,7 +378,11 @@ function App() {
               </motion.a>
               <motion.a
                 className="contact-link"
-                whileHover={{ scale: 1.05 }}
+                initial={{ opacity: 0, x: 50, rotateY: 20 }}
+                whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.08, rotateZ: 2 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleContactClick('linkedin')}
               >
